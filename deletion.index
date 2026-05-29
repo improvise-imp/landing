@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account - IMPROVISE</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #111827;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #1f2937;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ol, ul {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .email-box {
+      background: #f9fafb;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .email-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Delete Your Account - IMPROVISE</h1>
+
+    <p>
+      You do not need to log into the app to request account deletion.
+    </p>
+
+    <p>
+      If you would like to delete your account and associated data from IMPROVISE,
+      please follow the steps below.
+    </p>
+
+    <div class="email-box">
+      <strong>Email:</strong>
+      <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>
+
+      <strong style="margin-top:10px;">Subject:</strong>
+      Account Deletion Request
+    </div>
+
+    <h2>How to Request Account Deletion</h2>
+
+    <ol>
+      <li>Send an email to <strong>support.improvise@gmail.com</strong>.</li>
+      <li>Use the subject line: <strong>"Account Deletion Request"</strong>.</li>
+      <li>Include the email address associated with your account.</li>
+    </ol>
+
+    <h2>What Will Be Deleted</h2>
+
+    <ul>
+      <li>Your account information (Google account ID and email address).</li>
+      <li>App usage data.</li>
+      <li>Progress and other in-app data.</li>
+    </ul>
+
+    <h2>What May Be Retained</h2>
+
+    <ul>
+      <li>Transaction records required for legal or financial compliance.</li>
+      <li>Data required for fraud prevention and security purposes.</li>
+    </ul>
+
+    <h2>Retention Period</h2>
+
+    <p>
+      All deletable data will be permanently removed within
+      <strong>7–30 days</strong> after receiving and verifying your request.
+    </p>
+
+    <h2>Questions?</h2>
+
+    <p>
+      Contact us at
+      <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>.
+    </p>
+
+    <div class="footer">
+      © 2026 IMPROVISE. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
