@@ -13,79 +13,101 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      font-family: Inter, Arial, sans-serif;
+      background: #05070c;
+      color: #e5e7eb;
       line-height: 1.7;
       padding: 40px 20px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: #0c111b;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
 
     h1 {
-      color: #111827;
-      margin-bottom: 20px;
+      font-size: 2.3rem;
+      color: #ffffff;
+      margin-bottom: 12px;
       text-align: center;
     }
 
+    .subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 40px;
+    }
+
     h2 {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      color: #1f2937;
+      color: #ffffff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
     }
 
-    p {
-      margin-bottom: 15px;
+    p,
+    li {
+      color: #cbd5e1;
     }
 
-    ol, ul {
-      margin-left: 25px;
+    ol,
+    ul {
+      margin-left: 24px;
       margin-bottom: 20px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .email-box {
-      background: #f9fafb;
-      border-left: 4px solid #2563eb;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 6px;
+      margin: 30px 0;
+      padding: 24px;
+      border-radius: 16px;
+      background: linear-gradient(
+        90deg,
+        rgba(120, 55, 15, 0.45),
+        rgba(140, 100, 20, 0.25)
+      );
+      border: 1px solid rgba(201, 138, 42, 0.25);
     }
 
     .email-box strong {
       display: block;
-      margin-bottom: 5px;
+      color: #ffffff;
+      margin-bottom: 6px;
     }
 
     a {
-      color: #2563eb;
+      color: #f2b24f;
       text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #ffc76a;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
       text-align: center;
-      color: #6b7280;
+      color: #94a3b8;
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .container {
-        padding: 25px;
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -93,7 +115,11 @@
 <body>
 
   <div class="container">
-    <h1>Delete Your Account - IMPROVISE</h1>
+
+    <h1>Delete Your Account</h1>
+    <p class="subtitle">
+      Request permanent deletion of your IMPROVISE account and associated data.
+    </p>
 
     <p>
       You do not need to log into the app to request account deletion.
@@ -105,10 +131,12 @@
     </p>
 
     <div class="email-box">
-      <strong>Email:</strong>
-      <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>
+      <strong>Email</strong>
+      <a href="mailto:support.improvise@gmail.com">
+        support.improvise@gmail.com
+      </a>
 
-      <strong style="margin-top:10px;">Subject:</strong>
+      <strong style="margin-top: 14px;">Subject</strong>
       Account Deletion Request
     </div>
 
@@ -116,7 +144,7 @@
 
     <ol>
       <li>Send an email to <strong>support.improvise@gmail.com</strong>.</li>
-      <li>Use the subject line: <strong>"Account Deletion Request"</strong>.</li>
+      <li>Use the subject line <strong>"Account Deletion Request"</strong>.</li>
       <li>Include the email address associated with your account.</li>
     </ol>
 
@@ -146,12 +174,15 @@
 
     <p>
       Contact us at
-      <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>.
+      <a href="mailto:support.improvise@gmail.com">
+        support.improvise@gmail.com
+      </a>
     </p>
 
     <div class="footer">
       © 2026 IMPROVISE. All rights reserved.
     </div>
+
   </div>
 
 </body>
