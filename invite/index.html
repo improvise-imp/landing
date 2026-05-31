@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You're Invited | Improvise</title>
+  <meta name="description" content="Join Improvise with a referral code and train your decision-making under pressure." />
+  <link rel="canonical" href="https://improviseapp.net/invite" />
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --card: #141418;
+      --border: #2a2a32;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --accent: #f59e0b;
+      --accent-dim: rgba(245, 158, 11, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245, 158, 11, 0.12), transparent), var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 999px;
+      padding: 6px 12px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .code-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .code-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .code-value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      flex: 1;
+      min-width: 0;
+      word-break: break-all;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 10px 16px;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn:active { opacity: 0.85; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 16px;
+    }
+
+    .steps li {
+      counter-increment: step;
+      padding-left: 36px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .steps strong { color: var(--text); }
+
+    .notice {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .notice.missing {
+      color: #f87171;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">Referral invite</span>
+    <h1>Train under pressure with Improvise</h1>
+    <p class="lead">Someone invited you to join. Use their referral code when you sign up in the app so they unlock reward milestones.</p>
+
+    <section class="card" aria-labelledby="code-heading">
+      <p id="code-heading" class="code-label">Your referral code</p>
+      <div class="code-row">
+        <p id="referral-code" class="code-value" aria-live="polite">—</p>
+        <button type="button" class="btn btn-primary" id="copy-btn">Copy code</button>
+      </div>
+      <p id="code-notice" class="notice" hidden></p>
+    </section>
+
+    <section class="card">
+      <p class="code-label">How to join</p>
+      <ol class="steps">
+        <li><strong>Download Improvise</strong> from the App Store when it launches (link on <a href="/">improviseapp.net</a>).</li>
+        <li><strong>Create an account</strong> or sign in on the Sign up / Sign in screen.</li>
+        <li><strong>Enter the referral code</strong> in the optional referral field before you continue.</li>
+        <li><strong>Complete sign-up</strong> — your invite is applied automatically after authentication.</li>
+      </ol>
+    </section>
+
+    <p class="lead" style="margin-bottom: 0; font-size: 0.95rem;">
+      Referrers unlock timed premium rewards at 1, 3, and 10 successful invites.
+    </p>
+
+    <footer>
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:support.improvise@gmail.com">Support</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var raw = params.get("code") || "";
+      var code = raw.trim().toUpperCase().replace(/\s+/g, "");
+      var codeEl = document.getElementById("referral-code");
+      var noticeEl = document.getElementById("code-notice");
+      var copyBtn = document.getElementById("copy-btn");
+
+      if (code.length >= 4 && code.length <= 32) {
+        codeEl.textContent = code;
+      } else if (raw.trim()) {
+        codeEl.textContent = raw.trim();
+        noticeEl.hidden = false;
+        noticeEl.className = "notice missing";
+        noticeEl.textContent = "This code looks invalid. Ask your friend to resend their invite link.";
+      } else {
+        codeEl.textContent = "No code in link";
+        noticeEl.hidden = false;
+        noticeEl.className = "notice missing";
+        noticeEl.textContent = "Open the full invite link from your friend, or ask them to share their referral code directly.";
+        copyBtn.disabled = true;
+        copyBtn.style.opacity = "0.5";
+      }
+
+      copyBtn.addEventListener("click", function () {
+        var text = codeEl.textContent;
+        if (!text || text === "—" || text === "No code in link") return;
+
+        function onCopied() {
+          copyBtn.textContent = "Copied!";
+          setTimeout(function () { copyBtn.textContent = "Copy code"; }, 1600);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(onCopied).catch(fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+
+        function fallbackCopy() {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "absolute";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand("copy");
+            onCopied();
+          } catch (e) {}
+          document.body.removeChild(ta);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
