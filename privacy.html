@@ -1,155 +1,63 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Improvise</title>
-  <meta name="description" content="Privacy Policy for Improvise app." />
-  <style>
-    body { font-family: Inter, Arial, sans-serif; margin: 0; background: #0b0b0d; color: #f5f5f7; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
-    .card { background: #15161a; border: 1px solid #2a2d34; border-radius: 14px; padding: 22px; }
-    h1, h2, h3 { color: #ffffff; }
-    p, li { color: #c3c6cf; line-height: 1.65; }
-    a { color: #ff8b5f; }
-    hr { border: none; border-top: 1px solid #2a2d34; margin: 20px 0; }
-    .muted { color: #9da3b3; }
-    .foot-links { margin-top: 16px; display: flex; gap: 14px; flex-wrap: wrap; }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <h1>Privacy Policy</h1>
-    <p class="muted"><strong>Last updated:</strong> May 28, 2026</p>
+/** Privacy Policy and Data & AI summary — see `legalContent.ts` for FAQ and Terms. */
 
-    <div class="card">
-      <p>
-        This Privacy Policy explains how <strong>IMPROVISE</strong> ("we", "our", "us")
-        collects, uses, discloses, and protects information when you use the Improvise mobile application
-        and related services.
-      </p>
+export const PRIVACY_LAST_UPDATED = "May 2026";
 
-      <h2>1. Contact Information</h2>
-      <p>
-        Data Controller / App Operator: <strong>IMPROVISE</strong><br />
-        Email: <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a><br />
-        Website: <a href="https://improviseapp.net">https://improviseapp.net</a><br />
-        Address: Lagos, Nigeria
-      </p>
+export const privacySections = [
+  {
+    title: "1. Information we collect",
+    body:
+      "When you create an account we collect your email address and display name. We store training data such as XP, streaks, completed scenarios, daily challenge progress, achievements, referral activity, and subscription status. If you use Real Life Mode or the Journal, we store the text you submit, optional moods and tags, and any AI insight generated for you.",
+  },
+  {
+    title: "2. How we use your information",
+    body:
+      "We use your information to operate the app: save progress across devices, run pressure scenarios, show leaderboards, process referrals and subscriptions, store journal entries, and deliver Real Life and Journal AI analysis. We do not sell your personal information.",
+  },
+  {
+    title: "3. Where data is stored",
+    body:
+      "Account and progress data are stored on secure cloud infrastructure (Supabase). A copy of your profile may be cached on your device so the app works offline and loads faster. Auth sessions are stored on your device until you sign out.",
+  },
+  {
+    title: "4. AI and third-party services",
+    body:
+      "Real Life Mode and Journal analyze send the text you enter to our servers, which call Anthropic’s API to generate insight. We also use Supabase (hosting and database), RevenueCat (subscriptions on iOS and Android), PostHog (product analytics — usage events such as screen views and feature taps, not journal or Real Life text), and Apple or Google when you sign in or purchase. Each provider processes data under their own terms and privacy policies.",
+  },
+  {
+    title: "5. What other users can see",
+    body:
+      "If you appear on the leaderboard, other signed-in users can see your display name, XP, and streak. We do not show your email, journal entries, or Real Life analyses to other users.",
+  },
+  {
+    title: "6. Your choices",
+    body:
+      "You can update your display name in Settings, manage notifications on your device, restore or cancel subscriptions through the store or Improvise Pro settings, and delete your account from Settings to request removal of your cloud profile. Clearing app data on your device removes local caches but may not delete server data unless you delete your account first.",
+  },
+] as const;
 
-      <h2>2. Information We Collect</h2>
-
-      <h3>2.1 Information you provide</h3>
-      <ul>
-        <li>Account details (such as email address and display name).</li>
-        <li>Content you submit in Real Life Mode (situation text and related prompts).</li>
-        <li>Support communications and inquiries.</li>
-      </ul>
-
-      <h3>2.2 Information generated through app use</h3>
-      <ul>
-        <li>Progress data (XP, streaks, completed scenarios, daily challenge progress, achievements).</li>
-        <li>Subscription and entitlement status.</li>
-        <li>Referral information (referral code usage and milestone progress).</li>
-        <li>Leaderboard-related stats (display name, XP, streak).</li>
-      </ul>
-
-      <h3>2.3 Device and technical data</h3>
-      <ul>
-        <li>Authentication/session state and app cache data stored on your device.</li>
-        <li>Basic diagnostic and error information needed to keep the service working.</li>
-      </ul>
-
-      <h2>3. How We Use Information</h2>
-      <ul>
-        <li>Provide core app functionality and account authentication.</li>
-        <li>Save and sync progress across sessions/devices.</li>
-        <li>Generate Real Life Mode analysis.</li>
-        <li>Operate leaderboards and referral rewards.</li>
-        <li>Process subscriptions and restore purchases.</li>
-        <li>Maintain security, prevent abuse, and troubleshoot issues.</li>
-        <li>Comply with legal obligations.</li>
-      </ul>
-
-      <h2>4. Legal Bases (if applicable, e.g. GDPR/UK GDPR)</h2>
-      <ul>
-        <li><strong>Contract:</strong> to provide the app features you request.</li>
-        <li><strong>Legitimate interests:</strong> service security, reliability, and fraud prevention.</li>
-        <li><strong>Consent:</strong> where required (for example, optional notifications).</li>
-        <li><strong>Legal obligation:</strong> where processing is required by law.</li>
-      </ul>
-
-      <h2>5. Third-Party Services and Data Sharing</h2>
-      <p>We use service providers to operate parts of Improvise. Depending on feature use, data may be processed by:</p>
-      <ul>
-        <li><strong>Supabase</strong> (authentication, database, backend infrastructure).</li>
-        <li><strong>Anthropic</strong> (AI processing for Real Life Mode content).</li>
-        <li><strong>RevenueCat</strong> (subscription and entitlement management).</li>
-        <li><strong>Apple / Google</strong> (sign-in, billing and platform services where applicable).</li>
-      </ul>
-      <p>
-        We do not sell your personal information.
-        We share data only as needed to provide the service, comply with law, or protect rights/safety.
-      </p>
-
-      <h2>6. Public Information (Leaderboard)</h2>
-      <p>
-        If you appear on leaderboards, other signed-in users may see your display name, XP, and streak.
-        We do not display your email address or Real Life Mode content to other users.
-      </p>
-
-      <h2>7. Data Retention</h2>
-      <p>
-        We retain information for as long as needed to provide the service and for legitimate business/legal purposes.
-        Account-related cloud data is retained until account deletion is requested and completed, unless longer retention is required by law.
-      </p>
-
-      <h2>8. Data Security</h2>
-      <p>
-        We apply reasonable administrative, technical, and organizational safeguards.
-        However, no system is 100% secure. You are responsible for protecting your account credentials.
-      </p>
-
-      <h2>9. International Transfers</h2>
-      <p>
-        Your information may be processed in countries other than your own by us or our service providers.
-        Where required, we use appropriate safeguards for cross-border data transfers.
-      </p>
-
-      <h2>10. Your Rights and Choices</h2>
-      <ul>
-        <li>Update your display name in app settings.</li>
-        <li>Manage notification preferences on your device.</li>
-        <li>Manage/cancel subscriptions via App Store / Google Play or in-app subscription settings.</li>
-        <li>Delete your account from in-app settings (removes cloud profile data subject to legal retention requirements).</li>
-        <li>Clear app data on device (removes local cache only).</li>
-      </ul>
-      <p>
-        Depending on your location, you may have rights to access, correct, delete, restrict, or object to processing.
-        To exercise rights, contact <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>.
-      </p>
-
-      <h2>11. Children’s Privacy</h2>
-      <p>
-        Improvise is not directed to children under the age of 13.
-        If you believe a child has provided personal data, contact us and we will take appropriate action.
-      </p>
-
-      <h2>12. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time.
-        We will post the updated version on this page and update the "Last updated" date.
-      </p>
-
-      <hr />
-      <p class="muted">
-        If you have questions about this Privacy Policy, contact:
-        <a href="mailto:support.improvise@gmail.com">support.improvise@gmail.com</a>.
-      </p>
-      <div class="foot-links">
-        <a href="https://improviseapp.net/">Home</a>
-      </div>
-    </div>
-  </main>
-</body>
-</html>
+export const dataAndAiSummary = [
+  {
+    title: "Cloud sync",
+    body: "Progress, profile, journal entries, and Real Life analyses sync to your account so you can sign in on a new device.",
+  },
+  {
+    title: "Journal",
+    body: "Manual journal entries (text, moods, tags, and any AI insight you request) are stored in your account. Insights stats reflect manual entries only. Real Life analyses imported into Journal are read-only and are not re-analyzed unless you edit a manual entry.",
+  },
+  {
+    title: "Journal & Real Life AI",
+    body: "Text you submit in Real Life Mode or when you analyze a Journal entry is sent to our backend and processed using Anthropic to produce insight. Free accounts share a daily limit across both features; Pro unlocks unlimited analyses. Do not enter information you are not comfortable sharing with those systems.",
+  },
+  {
+    title: "Product analytics",
+    body: "We use PostHog to understand how features are used (for example sign-up completion, scenario completion, and paywall views). Events include screen paths and coarse metadata only — not journal entry text, Real Life situations, emails, or passwords. You can disable analytics in development builds; production analytics run when configured.",
+  },
+  {
+    title: "On your device",
+    body: "We cache profile, progress, and unsaved journal drafts locally for speed and offline use. Drafts stay on your device until you save an entry to your account. Sign out or delete your account to end your session.",
+  },
+  {
+    title: "Leaderboard",
+    body: "Your display name, XP, and streak may be visible to other players on the leaderboard. Journal entries and Real Life analyses are private to your account.",
+  },
+] as const;
