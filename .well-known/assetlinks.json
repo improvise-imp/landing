@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.improvise.app",
+      "sha256_cert_fingerprints": [
+        "D8:1E:5A:F8:8C:A8:2E:C5:28:E4:15:7E:55:A3:70:97:26:2B:1C:32:0D:9E:54:8B:6A:7C:EA:1B:3E:0F:4F:C5"
+      ]
+    }
+  }
+]
