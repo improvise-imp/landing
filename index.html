@@ -80,9 +80,11 @@
     }
     .shot img { width: 100%; display: block; }
 
-    section { padding: 20px 0 40px; }
+    section { padding: 40px 0; }
     .title { font-size: 28px; margin: 0 0 8px; }
-    .desc { color: var(--muted); margin: 0 0 20px; }
+    .desc { color: var(--muted); margin: 0 0 32px; }
+    
+    /* Grid Layouts */
     .grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0,1fr)); }
     .card {
       border: 1px solid var(--border);
@@ -92,24 +94,44 @@
     .card h3 { margin: 0 0 6px; font-size: 17px; }
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
 
+    /* Screenshots Section */
+    .screenshots-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 20px; }
+    .screenshot-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; }
+    .screenshot-card img { width: 100%; border-radius: 8px; margin-bottom: 16px; border: 1px solid #2a2d34; }
+    .screenshot-card h4 { margin: 0 0 6px; font-size: 18px; color: var(--text); }
+    .screenshot-card p { margin: 0; font-size: 14px; color: var(--muted); }
+
+    /* Testimonials Section */
+    .testimonials-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .testimonial-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .testimonial-text { font-style: italic; color: var(--text); margin-bottom: 20px; font-size: 15px; line-height: 1.6; }
+    .testimonial-author { font-weight: 700; color: var(--accent); font-size: 14px; }
+
+    /* FAQ Section */
+    .faq-list { display: flex; flex-direction: column; gap: 16px; max-width: 800px; margin: 0 auto; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+    .faq-question { font-weight: 700; font-size: 17px; margin-bottom: 10px; color: var(--text); }
+    .faq-answer { color: var(--muted); font-size: 15px; margin: 0; line-height: 1.6; }
+    .faq-section { text-align: center; }
+    .faq-section .desc { max-width: 600px; margin: 0 auto 32px; }
+
     .band {
-      margin-top: 8px;
+      margin-top: 40px;
       border: 1px solid #4c3a30;
       border-radius: 16px;
       background: linear-gradient(90deg, rgba(255,107,53,.17), rgba(255,212,59,.1));
-      padding: 18px;
+      padding: 24px;
       display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
     }
 
     footer {
       border-top: 1px solid rgba(255,255,255,.07);
-      margin-top: 14px; padding: 22px 0 30px; color: var(--muted); font-size: 14px;
+      margin-top: 40px; padding: 22px 0 30px; color: var(--muted); font-size: 14px;
     }
     .foot { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
     .foot-links { display: flex; gap: 14px; flex-wrap: wrap; }
     .foot-links a { color: var(--muted); text-decoration: none; }
 
-    /* Updated Media Query */
     @media (max-width: 920px) {
       .hero { grid-template-columns: 1fr; padding-top: 58px; }
       .grid { grid-template-columns: 1fr; }
@@ -127,9 +149,10 @@
       </div>
       <nav class="links">
         <a href="#features">Features</a>
+        <a href="#screenshots">App</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="https://improviseapp.net/blog">Blog</a>
-        <a href="https://improviseapp.net/terms">Terms</a>
-         <a href="https://improviseapp.net/privacy">Privacy</a>
       </nav>
     </div>
   </header>
@@ -192,10 +215,78 @@
           <h3>Leaderboard</h3>
           <p>Track your XP, streak, and progress against other players.</p>
         </article>
-        <article class="card">
-          <h3>Referral Rewards</h3>
-          <p>Invite friends and unlock premium reward milestones.</p>
-        </article>
+      </div>
+    </section>
+
+    <section id="screenshots">
+      <h2 class="title">Inside the Training</h2>
+      <p class="desc">Visual proof of your psychological survival tools.</p>
+      
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="/assets/screenshot-daily.png" alt="Daily Challenge Categories" />
+          <h4>Daily Challenge</h4>
+          <p>Focused career, relationship, and finance categories available each day.</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="/assets/screenshot-real-life.png" alt="Real Life Mode Analysis" />
+          <h4>Real Life Mode</h4>
+          <p>Enter a real situation to receive immediate structured analysis and regain clarity.</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="/assets/screenshot-elite.png" alt="Elite Scenarios Countdown" />
+          <h4>Elite Scenarios</h4>
+          <p>High-stakes simulations with A, B, and C options and a 25-second timer.</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="/assets/screenshot-journal.png" alt="Journal Reflections" />
+          <h4>Journal</h4>
+          <p>Capture private reflections using moods and tags, and access AI insights.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2 class="title">The Reality Check</h2>
+      <p class="desc">See how real people are using Improvise to sharpen their decision-making.</p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">"I used to freeze up when my boss put me on the spot. Improvise throws you into relatable, stressful situations—like finding out a boss is secretly giving your projects to a newer employee. It completely changed how I handle workplace pressure."</div>
+          <div class="testimonial-author">— The Ambitious Professional</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"If you are someone who panics over a text or an email, this is for you. The Real Life Mode lets you type out the stressful situation you are dealing with, and the app gives you a structured analysis to help you clear your head instantly."</div>
+          <div class="testimonial-author">— The Overwhelmed Texter</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"I wanted to build actual mental resilience, and this app has become my three-minute morning routine. The Dynamic Drills provide fresh, standard scenarios so my daily training never feels repetitive."</div>
+          <div class="testimonial-author">— The Daily Optimizer</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2 class="title">Frequently Asked Questions</h2>
+      <p class="desc">Everything you need to know about your training mechanics.</p>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What exactly is Improvise?</div>
+          <div class="faq-answer">Improvise is a psychological survival training app designed to help users sharpen their decision-making skills and instincts under intense life pressure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does Real Life Mode work?</div>
+          <div class="faq-answer">This feature is designed for active, real-world problems. By typing out the stressful situation you are currently facing, the app provides a structured analysis to help you clear your head and regain clarity instantly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Will the training get repetitive?</div>
+          <div class="faq-answer">No. The app features Dynamic Drills, which provide fresh, standard scenarios to ensure your daily training always feels new.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What happens in an Elite Scenario?</div>
+          <div class="faq-answer">These are high-stakes simulations built specifically to test your composure when placed under intense pressure. You are presented with multiple choices and a strict 25-second countdown timer to lock in your decision. This format removes the chance to hesitate, effectively training your response before real pressure tests it.</div>
+        </div>
       </div>
 
       <div class="band">
